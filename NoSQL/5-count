@@ -1,0 +1,3 @@
+// count of odcuments in school
+db.school.count()
+
