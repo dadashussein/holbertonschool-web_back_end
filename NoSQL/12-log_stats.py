@@ -3,7 +3,7 @@
 from pymongo import MongoClient
 
 
-if __name__ == "__main__":
+def get_nginx_stats():
     client = MongoClient('mongodb://127.0.0.1:27017')
     ngnix_collection = client.logs.nginx
 
@@ -34,3 +34,7 @@ if __name__ == "__main__":
     print(f"\tmethod PATCH:{patch_count}")
     print(f"\tmethod DELETE:{delete_count}")
     print(f"{path_status} status check")
+
+
+if __name__ == "__main__":
+    get_nginx_stats()
